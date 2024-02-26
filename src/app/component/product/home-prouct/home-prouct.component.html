@@ -1,0 +1,19 @@
+
+<br>
+<div class="container">
+    <div class="row">
+        <div *ngFor="let item of products" class="col-sm-6 mb-3 mb-sm-0">
+            <div class="card" style="margin-bottom: 20px;">
+                <div class="card-body">
+                    <h5 class="card-title">{{item.name}}</h5>
+                    <img class="mx-auto d-flex flex-column align-items-center" style="height: 200px; width: 200px;" src="{{item.photo}}">
+                    <br>
+                    <p class="card-text">Stock : {{item.stock}}</p>
+                    <p class="card-text">Harga : Rp.{{item.price}}</p>
+                    <a (click)="editProduct(item.id)" class="btn btn-primary" style="margin-right: 10px;">Update</a>
+                    <a (click)="deleteProduct(item)" class="btn btn-primary">Delete</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
